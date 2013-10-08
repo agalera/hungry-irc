@@ -10,7 +10,7 @@ import popen2
 import signal
 import random
 import datetime
-global cafe = 0
+cafe = 0
 import sqlite3 as lite
 import sys
 
@@ -104,8 +104,8 @@ def main():
                 else:
                     contador += 1
                     tmp = check_cafe()
-                    if (tmp != False)
-                    s.send("PRIVMSG %s :%s\r\n" % (CHAN, tmp))
+                    if (tmp != False):
+                        s.send("PRIVMSG %s :%s\r\n" % (CHAN, tmp))
 
             elif line[1] == "JOIN":
                 name = str(line[0].split("!")[0])
