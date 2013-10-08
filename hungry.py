@@ -98,7 +98,7 @@ def main():
             if(line[0]=="PING"):
                 s.send("PONG %s\r\n" % line[1])
                 if (contador == 10):
-                    if (9 > datetime.datetime.now().hour and 18 < datetime.datetime.now().hour):
+                    if (9 < datetime.datetime.now().hour and 18 > datetime.datetime.now().hour):
                         s.send("PRIVMSG %s :%s\r\n" % (CHAN, frases.random()))
                     contador = 0
                 else:
