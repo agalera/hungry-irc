@@ -23,7 +23,7 @@ def check_cafe():
     if (10 == datetime.datetime.now().hour or 16 == datetime.datetime.now().hour):
         if (cafe == 0):
             cafe = 1                            
-            return "no creeís que es hora de un café?"
+            return "no creeï¿½s que es hora de un cafï¿½?"
     else:
         cafe = 0
     return False
@@ -55,7 +55,7 @@ class Frases:
 
     def random(self):
         self.cur.execute('SELECT * FROM Frases ORDER BY RANDOM() LIMIT 1')
-        return self.cur.fetchall()[0][1]
+        return self.cur.fetchall()[0][1].encode('utf-8').strip()
 
 def main():
     HOST = "localhost"
